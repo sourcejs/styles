@@ -1,0 +1,306 @@
+/* Styles page
+---------------------------------------------------------------------------------- */
+
+/*
+
+	source_styles
+
+		<...>
+
+		source_section                                             __open
+			source_section_h
+
+		source_w
+			source_styles_ul
+				source_styles_li
+
+					source_style                                   __na | __active
+
+						$[source_style_cnt]                        __inverse
+							...
+
+						$[source_style_ac]
+
+							source_style_ac_link
+							source_style_ac_link_it
+
+							source_style_ac_i *                    __state | __hover | __size
+
+								source_style_ac_i_n
+
+								source_style_ac_i_val
+									source_style_ac_i_val_it
+
+*/
+
+.source_styles {
+
+	}
+
+.source_w {
+	width: auto;
+	padding: 0 2px;
+	}
+
+	.source_styles .source_w {
+		margin: 0 0 0 -25px;
+		}
+
+.source_ntf {
+	position: fixed; z-index: 50;
+	top: 0; left: 0; right: 0;
+
+	font-size: 14px;
+	color: #333;
+	text-align: center;
+
+	height: 50px;
+	line-height: 48px;
+	white-space: nowrap;
+	overflow: hidden;
+
+	background: #FFF6DD;
+	border-bottom: 1px solid #ccc;
+	box-shadow: 0 0 6px -2px rgba(0, 0, 0, .3);
+
+	opacity: 0;
+	visibility: hidden;
+
+	-webkit-transition: opacity .2s, visibility 0 .2s;
+	-moz-transition: opacity .2s, visibility 0 .2s;
+	-o-transition: opacity .2s, visibility 0 .2s;
+	transition: opacity .2s, visibility 0 .2s;
+	}
+
+	.source_ntf.__active {
+		opacity: 1;
+		visibility: visible;
+
+		-webkit-transition-delay: 0s;
+		-moz-transition-delay: 0s;
+		-o-transition-delay: 0s;
+		transition-delay: 0s;
+		}
+
+/* Cards list
+-------------------------------------------------- */
+
+.source_styles_ul {
+	padding: 0;
+	margin: 0;
+
+	margin-top: -30px;
+	margin-left: -3%;
+	}
+
+.source_styles_li {
+	display: inline-block;
+	vertical-align: top;
+	width: 30%;
+	margin: 30px 0 0 3%;
+	}
+	.source_styles_li:nth-child(3n-1){
+		text-align: center;
+		}
+	.source_styles_li:nth-child(3n-3){
+		text-align: right;
+		}
+
+/* /Cards list */
+
+/* Style card
+-------------------------------------------------- */
+
+.source_style {
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+
+	width: 90%; height: 100px;
+
+	border: 1px solid #e0e0e0;
+	box-shadow: 0 0 6px -1px rgba(0, 0, 0, .3);
+	overflow: hidden;
+	}
+
+	.source_style.__na:after {
+		content: "";
+		position: absolute;
+		top: -10px; right: -10px; bottom: -10px; left: -10px;
+		background: rgba(255,255,255,.6);
+		}
+
+.source_style_cnt {
+	padding: 20px;
+	height: 40px;
+	padding-top: 40px;
+	text-align: center;
+	white-space: nowrap;
+	-webkit-user-select: none;
+	-moz-user-select: none;
+	-o-user-select: none;
+	user-select: none;
+
+	-webkit-transition: padding .3s ease;
+	-moz-transition: padding .3s ease;
+	-o-transition: padding .3s ease;
+	transition: padding .3s ease;
+	}
+
+	.source_style_cnt.__inverse {
+		background: #444;
+		}
+
+/* total style reset */
+.source_style_cnt > div {
+	margin: 0 !important;
+	padding: 0 !important;
+	position: static !important;
+	width: auto !important;
+	height: auto !important;
+	overflow: auto !important;
+	min-height: 0 !important;
+	min-width: 0 !important;
+	visibility: visible !important;
+	display: block !important;
+	opacity: 1 !important;
+	background: none !important;
+	}
+
+.source_style_klass {
+	position: absolute;
+	top: 5px; right: 10px;
+	font-size: 11px;
+	color: #999;
+	}
+
+.source_style_ac {
+	position: absolute;
+	left: 0; right: 0;
+	bottom: -40px;
+	height: 40px;
+
+	background: #f0f0f0;
+	text-align: left;
+
+	-webkit-transition: bottom .3s ease;
+	-moz-transition: bottom .3s ease;
+	-o-transition: bottom .3s ease;
+	transition: bottom .3s ease;
+	}
+
+	.source_style:not(.__na):hover .source_style_cnt,
+	.source_style.__active .source_style_cnt {
+		padding-top: 20px;
+		}
+
+	.source_style:not(.__na):hover .source_style_ac,
+	.source_style.__active .source_style_ac {
+		bottom: 0;
+		}
+
+/* Actions */
+
+.source_style_ac_i {
+	display: inline-block;
+	padding: 4px 8px;
+	height: 100%;
+	vertical-align: middle;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+
+	cursor: pointer;
+	}
+	/*.source_style_ac_i:hover,*/
+	.source_style_ac_i.__h {
+		background: #dedede;
+		}
+	/*.source_style_ac_i:active,*/
+	.source_style_ac_i.__a {
+		background: #C5F7C8;
+		}
+
+.source_style_ac_i_n {
+	font-size: 11px;
+	color: #999;
+	}
+
+.source_style_ac_i_val_it {
+	padding: 0;
+	margin: 0;
+	width: 55px;
+	background: transparent;
+	border: 0 none;
+	font-size: 12px;
+	color: #333;
+	cursor: inherit;
+	white-space: nowrap;
+	}
+	.source_style_ac_i_val_it:focus {
+		outline: 1px dotted #666;
+		outline-offset: 1px;
+		}
+
+	.source_style_ac_i.__size .source_style_ac_i_val_it {
+		width: auto;
+		max-width: 100px;
+		}
+
+/* get link */
+.source_style_ac_link {
+	position: absolute;
+	top: 50%; margin-top: -10px;
+	right: 10px;
+	z-index: 10;
+	display: block;
+	overflow: hidden;
+	text-indent: 100%;
+	width: 20px; height: 20px;
+	background: url(../i/link.png) no-repeat 50%;
+	}
+	.source_style_ac_link:hover,
+	.source_style_ac_link.__h {
+		background-image: url(../i/link.png);
+		}
+	.source_style_ac_link:active,
+	.source_style_ac_link.__a {
+		-webkit-transform: scale(1.4);
+		-moz-transform: scale(1.4);
+		-ms-transform: scale(1.4);
+		-o-transform: scale(1.4);
+		transform: scale(1.4);
+		opacity: .5;
+		}
+
+/*
+.source_style_ac_link_it {
+	position: absolute;
+	bottom: 55px; left: 20px; right: 20px;
+
+	border: 1px solid #999;
+	padding: 4px 6px;
+
+	font-size: 12px;
+	color: #333;
+	display: none;
+	}
+
+	.source_style_ac_link_it.__active {
+		display: block;
+		}
+*/
+
+/* /Actions */
+
+/* /Style card */
+
+/* Special background
+-------------------------------------------------- */
+
+#stylesPhoto .source_style_cnt { background: #575757; }
+
+/* /Special background */
+
+/* /Styles page
+---------------------------------------------------------------------------------- */

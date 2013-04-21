@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if IE 8]>    <html class="ie8"> <![endif]-->
+<!--[if IE 9]>    <html class="ie9"> <![endif]-->
+<!--[if gt IE 9]><!--> <html> <!--<![endif]-->
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=10">
+<title>Стили</title>
+
+    <link href="/core/css/core.css" rel="stylesheet">
+    <!-- Page styles -->
+    <link href="css/styles.css" rel="stylesheet">
+
+    <!--[if lt IE 9]><script src="/core/js/lib/html5shiv.js"></script><![endif]-->
+    <script type="text/javascript" src="/plugins/lib/ZeroClipboard.min.js"></script> <!--TODO: add to require-->
+    <script data-main="js/styles.js" src="/core/js/lib/require-jquery.js"></script>
+
+    <!-- Your project styles -->
+        <!--<link href="/data/project.css" rel="stylesheet">-->
+    <!-- /Your project styles -->
+
+	<style>
+		/* Demo styles */
+
+		.al { /* Action Link */
+			color: #eb722e;
+			cursor: pointer;
+			}
+			.al:hover {
+				color: #b84819;
+				text-decoration: underline; /* for span tag links */
+				}
+	</style>
+
+</head>
+<body>
+
+<div class="source_container">
+<div class="source_styles source_main source_col-main" role="main">
+
+    <h1>Стили</h1>
+
+	<p>Описание:</p>
+
+    <p>
+        Страница содержит все стили для текста и ссылок, присутствующих на проекте.
+    </p>
+
+    <div class="source_section source_section__open">
+        <h2 class="source_section_h">Основные ссылки</h2>
+
+        <div class="source_w">
+            <ul class="source_styles_ul">
+                <li class="source_styles_li">
+                    <div class="source_style" id="default" data-state="#666" data-hover="#333" data-size="Regular, 12px">
+                        <a href="#">Ссылка по умолчанию</a>
+                    </div>
+                </li>
+                <li class="source_styles_li">
+                    <div class="source_style" id="al" data-state="#eb722e" data-hover="#b84819" data-size="Regular, 12px">
+                        <a class="al" href="#">Ссылка действия</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+</div>
+</div>
+
+</body>
+</html>
