@@ -12,7 +12,7 @@
     <link href="css/styles.css" rel="stylesheet">
 
     <!--[if lt IE 9]><script src="/core/js/lib/html5shiv.js"></script><![endif]-->
-    <script type="text/javascript" src="/plugins/lib/ZeroClipboard.min.js"></script> <!--TODO: add to require-->
+    <script type="text/javascript" src="js/ZeroClipboard.min.js"></script> <!--TODO: add to require-->
     <script data-main="js/styles.js" src="/core/js/lib/require-jquery.js"></script>
 
     <!-- Your project styles -->
@@ -22,6 +22,14 @@
 	<style>
 		/* Demo styles */
 
+        .f-i {
+            font-style: italic;
+        }
+
+        .f-18 {
+            font-size: 18px;
+        }
+
 		.al { /* Action Link */
 			color: #eb722e;
 			cursor: pointer;
@@ -30,6 +38,22 @@
 				color: #b84819;
 				text-decoration: underline; /* for span tag links */
 				}
+
+        .pseudo {
+            text-decoration: none !important;
+            border-bottom: dotted 1px;
+            cursor: pointer;
+            }
+
+        .inverse {
+            color: #999;
+            cursor: pointer;
+            }
+            .inverse:hover {
+                color: #fff;
+                text-decoration: underline; /* for span tag links */
+                }
+
 	</style>
 
 </head>
@@ -47,6 +71,25 @@
     </p>
 
     <div class="source_section source_section__open">
+        <h2 class="source_section_h">Стили текста</h2>
+
+        <div class="source_w">
+            <ul class="source_styles_ul">
+                <li class="source_styles_li">
+                    <div class="source_style" id="f-i" data-size="Italic, 12px">
+                        <span class="f-i">Наклонный текст</span>
+                    </div>
+                </li>
+                <li class="source_styles_li">
+                    <div class="source_style" id="f-18" data-size="Regular, 18px">
+                        <span class="f-18">Крупный текст</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="source_section source_section__open">
         <h2 class="source_section_h">Основные ссылки</h2>
 
         <div class="source_w">
@@ -59,6 +102,16 @@
                 <li class="source_styles_li">
                     <div class="source_style" id="al" data-state="#eb722e" data-hover="#b84819" data-size="Regular, 12px">
                         <a class="al" href="#">Ссылка действия</a>
+                    </div>
+                </li>
+                <li class="source_styles_li">
+                    <div class="source_style" id="pseudo" data-size="Regular, 12px">
+                        <a class="pseudo" href="#">Псевдо-ссылка</a>
+                    </div>
+                </li>
+                <li class="source_styles_li">
+                    <div class="source_style" id="inverse" data-size="Regular, 12px" data-inverse="true">
+                        <a class="inverse" href="#">Светлая ссылка</a>
                     </div>
                 </li>
             </ul>
