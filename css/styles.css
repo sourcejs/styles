@@ -39,11 +39,11 @@
 
 .source_w {
 	width: auto;
-	padding: 0 2px;
+	font-size: 12px;
 	}
 
 	.source_styles .source_w {
-		margin: 0 0 0 -25px;
+		margin: 0 -1px 0 -25px;
 		}
 
 .source_ntf {
@@ -116,10 +116,12 @@
 	display: inline-block;
 	vertical-align: middle;
 
-	width: 90%; height: 100px;
+	width: 98%; height: 100px;
 
-	border: 1px solid #e0e0e0;
-	box-shadow: 0 0 6px -1px rgba(0, 0, 0, .3);
+	border: 2px solid #e3e3e3;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+
 	overflow: hidden;
 	}
 
@@ -169,7 +171,7 @@
 
 .source_style_klass {
 	position: absolute;
-	top: 5px; right: 10px;
+	top: 5px; right: 8px;
 	font-size: 11px;
 	color: #999;
 	}
@@ -179,6 +181,7 @@
 	left: 0; right: 0;
 	bottom: -40px;
 	height: 40px;
+	padding-right: 40px;
 
 	background: #f0f0f0;
 	text-align: left;
@@ -187,6 +190,8 @@
 	-moz-transition: bottom .3s ease;
 	-o-transition: bottom .3s ease;
 	transition: bottom .3s ease;
+
+	white-space: nowrap;
 	}
 
 	.source_style:not(.__na):hover .source_style_cnt,
@@ -205,11 +210,14 @@
 	display: inline-block;
 	padding: 4px 8px;
 	height: 100%;
+	max-width: 50%;
+
 	vertical-align: middle;
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 
+	font-size: 11px;
 	cursor: pointer;
 	}
 	/*.source_style_ac_i:hover,*/
@@ -222,8 +230,13 @@
 		}
 
 .source_style_ac_i_n {
-	font-size: 11px;
+	font-size: 10px;
 	color: #999;
+	}
+
+.source_style_ac_i_val {
+	overflow: hidden;
+	text-overflow: ellipsis;
 	}
 
 .source_style_ac_i_val_it {
@@ -251,7 +264,7 @@
 .source_style_ac_link {
 	position: absolute;
 	top: 50%; margin-top: -10px;
-	right: 10px;
+	right: 5px;
 	z-index: 10;
 	display: block;
 	overflow: hidden;
@@ -273,34 +286,9 @@
 		opacity: .5;
 		}
 
-/*
-.source_style_ac_link_it {
-	position: absolute;
-	bottom: 55px; left: 20px; right: 20px;
-
-	border: 1px solid #999;
-	padding: 4px 6px;
-
-	font-size: 12px;
-	color: #333;
-	display: none;
-	}
-
-	.source_style_ac_link_it.__active {
-		display: block;
-		}
-*/
-
 /* /Actions */
 
 /* /Style card */
-
-/* Special background
--------------------------------------------------- */
-
-#stylesPhoto .source_style_cnt { background: #575757; }
-
-/* /Special background */
 
 /* /Styles page
 ---------------------------------------------------------------------------------- */
