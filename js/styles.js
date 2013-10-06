@@ -23,10 +23,9 @@ require([
     "jquery",
     "core/options",
     "modules/headerFooter",
-
-    "plugins/search/js/search"
+    "modules/search"
     ],
-    function () {
+    function ($, options, headerFooter, search) {
 
         //console.log('-----------------------START---------------------------');
 
@@ -36,7 +35,7 @@ require([
 
             //zero clipboard settings
             ZeroClipboard.setDefaults({
-                moviePath: '/plugins/lib/ZeroClipboard.swf',
+                moviePath: 'js/ZeroClipboard.swf',
                 hoverClass: '__h',
                 activeClass: '__a'
             });
